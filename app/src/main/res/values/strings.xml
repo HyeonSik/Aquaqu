@@ -13,5 +13,9 @@
     <string name="aqu_important">주의사항</string>
     <string name="aqu_travel">관광정보</string>
 
+    <string name="close_app">뒤로 버튼을 한 번 더 누르면 앱이 종료됩니다.</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

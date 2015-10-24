@@ -1,9 +1,8 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowActionModeOverlay">true</item>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+
     </style>
 
     <style name="pager_name">

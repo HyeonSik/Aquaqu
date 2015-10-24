@@ -1,107 +1,65 @@
 package com.nexters.aquaqu;
 
-import android.os.AsyncTask;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.widget.Toast;
 
-import com.nexters.aquaqu.config.CConstant;
-import com.nexters.aquaqu.helper.OceanHelper;
-
-import net.htmlparser.jericho.Element;
-import net.htmlparser.jericho.HTMLElementName;
-import net.htmlparser.jericho.Source;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.util.Locale;
+import com.nexters.aquaqu.activity.SplashActivity;
+import com.nexters.aquaqu.adapter.MainAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Source source;
-    OceanHelper helper = new OceanHelper();
+    MainAdapter mAdapter;
+
+    Context mContext;
+
+    ViewPager mViewPager;
+
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mContext = this;
 
+        mAdapter = new MainAdapter(getSupportFragmentManager());
+        mViewPager = (ViewPager) findViewById(R.id.pager);
+        mViewPager.setAdapter(mAdapter);
 
-        //new GetHtml("http://sms.khoa.go.kr/koofs/kor/observation/obs_real_detail.asp?tsType=0&tsId=13&obsItem=ALL").execute();
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setLogo(R.drawable.ic_logo_24dp);
+        toolbar.setBackgroundColor(getResources().getColor(R.color.ctrans));
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        startActivity(new Intent(mContext, SplashActivity.class));
     }
 
 
-    private class GetHtml extends AsyncTask<String, String, Void> {
+    private long backKeyPressedTime = 0;
 
-        String url;
-        String BBS_SPAN_ITEM;
+    @Override
+    public void onBackPressed() {
+        closAppDialog();
+    }
 
-        GetHtml(String url) {
-            this.url = url;
-        }
-
-        @Override
-        protected Void doInBackground(String... strings) {
-
-            try {
-                Log.e("@@@", "들어옴!");
-                URL URL = new URL(url);
-                InputStream html = URL.openStream();
-                source = new Source(new InputStreamReader(html, "utf-8"));
-                source.fullSequentialParse();
-
-
-                Element BBS_DIV = (Element) source.getAllElements(HTMLElementName.DIV).get(31); //BBSlocate 번째 의 DIV 를 모두 가져온다.
-                Element BBS_UL = (Element) BBS_DIV.getAllElements(HTMLElementName.UL).get(0); //ul 접속
-
-                Element BBS_LI = (Element) BBS_UL.getAllElements(HTMLElementName.LI).get(0); //데이터가 있는 li에 접속
-                Element element1 = (Element) BBS_LI.getAllElements(HTMLElementName.IMG).get(0);
-                String BBS_LI_TITLE = element1.getAttributeValue("title");
-
-
-                Element BBS_ITEM = (Element) BBS_UL.getAllElements(HTMLElementName.LI).get(2); //데이터가 있는 li에 접속
-                Element BBS_SPAN = (Element) BBS_ITEM.getAllElements(HTMLElementName.SPAN).get(0);
-                BBS_SPAN_ITEM = BBS_SPAN.getContent().toString();
-
-
-                Element BBS_SPAN1 = (Element) BBS_ITEM.getAllElements(HTMLElementName.SPAN).get(1);
-                String BBS_SAPN_ITEM1 = BBS_SPAN1.getContent().toString();
-
-                helper.setW_temp(BBS_LI_TITLE + BBS_SPAN_ITEM.trim() + BBS_SAPN_ITEM1.trim());
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void aVoid) {
-
-            if (!helper.getW_temp().equals("")) {
-                //textView.setText(helper.getW_temp());
-            } else {
-                Log.e("@@@@", "어허허허");
-            }
-            super.onPostExecute(aVoid);
+    public void closAppDialog() {
+        if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
+            super.onBackPressed();
+            finish();
+        } else {
+            backKeyPressedTime = System.currentTimeMillis();
+            Toast.makeText(mContext, getResources().getString(R.string.close_app), Toast.LENGTH_SHORT).show();
         }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
