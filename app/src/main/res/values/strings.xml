@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">Aquaqu</string>
     <string name="action_settings">Settings</string>
+
+    <string name="aqu_weather">날씨</string>
+    <string name="aqu_temp">기온</string>
+    <string name="aqu_wind">바람</string>
+    <string name="aqu_sea">조위</string>
+    <string name="aqu_water">수온</string>
+    <string name="aqu_height">파고</string>
+
+    <string name="aqu_news">뉴스</string>
+    <string name="aqu_important">주의사항</string>
+    <string name="aqu_travel">관광정보</string>
+
+
 </resources>

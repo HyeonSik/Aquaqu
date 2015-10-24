@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_beach01">
+    <!--main Linear start-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/tb_include"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="44dp" />
+
+        <TextView
+            android:id="@+id/pager01_name"
+            style="@style/pager_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="22" />
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/pager01_desc"
+            style="@style/pager_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="22desc" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="28dp" />
+
+        <!--pager item start-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+
+            android:orientation="vertical">
+            <!--1st column-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!--weather-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/img_data01"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/pager_item_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aqu_weather" />
+
+                    <TextView
+                        android:id="@+id/aqu_weather01"
+                        style="@style/pager_item_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!--temp-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/img_data02"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/pager_item_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aqu_temp" />
+
+                    <TextView
+                        android:id="@+id/aqu_temp01"
+                        style="@style/pager_item_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!--wind-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/img_data03"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/pager_item_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aqu_wind" />
+
+                    <TextView
+                        android:id="@+id/aqu_wind01"
+                        style="@style/pager_item_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--1st column end-->
+
+            <!--2nd column-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!--aqu_sea-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/img_data04"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/pager_item_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aqu_sea" />
+
+                    <TextView
+                        android:id="@+id/aqu_sea01"
+                        style="@style/pager_item_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!--aqu_water-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/img_data05"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/pager_item_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aqu_water" />
+
+                    <TextView
+                        android:id="@+id/aqu_water01"
+                        style="@style/pager_item_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!--height-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/img_data06"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/pager_item_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aqu_height" />
+
+                    <TextView
+                        android:id="@+id/aqu_height01"
+                        style="@style/pager_item_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--2nd column end-->
+
+            <!--news and important-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!--news-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="#55ffffff"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!--title-->
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/pager_item_16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/aqu_news" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_more_36dp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:id="@+id/pager_news"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <!--news end-->
+
+                <!--important-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="#55ffffff"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        style="@style/pager_item_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/aqu_important" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:id="@+id/pager_important"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--important end-->
+        </LinearLayout>
+        <!--pager item end-->
+
+    </LinearLayout>
+    <!--main LInear end-->
+</ScrollView>
