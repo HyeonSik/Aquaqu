@@ -23,6 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
+                android:id="@+id/setting_exit"
                 android:layout_marginRight="16dp"
                 android:background="@drawable/ic_clear_white_48dp" />
         </RelativeLayout>
@@ -35,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="44dp"
-            android:text="성산일출봉" />
+            android:text="이호해수욕장" />
 
         <View
             android:layout_width="32dp"
@@ -301,7 +302,7 @@
                 android:weightSum="43">
 
                 <ImageView
-                    android:id="@+id/start9"
+                    android:id="@+id/start09"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
