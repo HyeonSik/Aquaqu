@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.nexters.aquaqu.R;
 import com.nexters.aquaqu.util.PreferenceManager;
@@ -138,7 +137,8 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.setting_exit:
                 PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
-                Toast.makeText(SettingActivity.this, PreferenceManager.getInstance(SettingActivity.this).getSelectedstar()+"", Toast.LENGTH_SHORT).show();
+                setResult(RESULT_OK);
+//                Toast.makeText(SettingActivity.this, PreferenceManager.getInstance(SettingActivity.this).getSelectedstar()+"", Toast.LENGTH_SHORT).show();
                 finish();
                 break;
         }
