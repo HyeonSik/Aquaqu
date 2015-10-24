@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mAdapter);
 
+        mViewPager.setCurrentItem(PreferenceManager.getInstance(mContext).getSelectedstar());
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setLogo(R.drawable.ic_logo_36dp);
         setSupportActionBar(toolbar);
@@ -85,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.action_setup:
-                startActivity(new Intent(mContext, SettingActivity.class));
                 Intent intent = new Intent(mContext, SettingActivity.class);
                 startActivityForResult(intent, 2);
                 break;
