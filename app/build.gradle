@@ -24,6 +24,4 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.android.support:design:22.2.1'
     compile 'net.htmlparser.jericho:jericho-html:3.3'
-    compile files('E:/workspace/Aquaqu/libs/XMLSerializer.jar')
-    compile files('libs/java-json.jar')
 }

@@ -26,11 +26,9 @@ public class SosParse {
         new SosAsync().execute();
     }
 
-
     private ArrayList<SosHelper> dataList;
 
     private class SosAsync extends AsyncTask<Void, Void, Void> {
-
 
         SosAsync() {
 
@@ -54,7 +52,6 @@ public class SosParse {
                 dataList = mySosXMLHandler.getData();
 
                 Log.e("____data", dataList.toString() + "");
-
             } catch (Exception e) {
                 System.out.println(e);
             }

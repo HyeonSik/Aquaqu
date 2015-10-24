@@ -5,16 +5,16 @@ package com.nexters.aquaqu.helper;
  */
 public class SosHelper {
 
-    /*
-     <string>발생유형</string>
-      <string>발생해역</string>
-      <string>발생일시</string>
-      <string>사고선박수</string>
-      <string>사망인원</string>
-      <string>구조인원</string>
-      <string>관할해경서</string>
-      <string>_id</string>
-      <string>실종인원</string>
+    /**
+     * <string>발생유형</string>
+     * <string>발생해역</string>
+     * <string>발생일시</string>
+     * <string>사고선박수</string>
+     * <string>사망인원</string>
+     * <string>구조인원</string>
+     * <string>관할해경서</string>
+     * <string>_id</string>
+     * <string>실종인원</string>
      */
 
     String sos_what;

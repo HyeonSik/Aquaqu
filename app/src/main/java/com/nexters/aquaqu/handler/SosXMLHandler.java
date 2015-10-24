@@ -18,7 +18,8 @@ public class SosXMLHandler extends DefaultHandler {
     public ArrayList<SosHelper> getData() {
         return dataList;
     }
-   int i;
+
+    int i;
 
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         elementOn = true;

@@ -20,19 +20,17 @@ import javax.xml.parsers.SAXParserFactory;
  */
 public class JellyParse {
 
-    public void main(){
+    public void main() {
 
         new JellyAsync().execute();
     }
-
 
 
     private ArrayList<JellyHelper> dataList;
 
     private class JellyAsync extends AsyncTask<Void, Void, Void> {
 
-
-        JellyAsync(){
+        JellyAsync() {
 
         }
 
@@ -52,12 +50,9 @@ public class JellyParse {
 
                 // load parsing data & View
                 dataList = myJellyXMLHandler.getData();
-
-//                Log.e("____data", dataList.toString() + "");
-
             } catch (Exception e) {
                 System.out.println(e);
-                Log.e("_______error",e.getMessage());
+                Log.e("_______error", e.getMessage());
             }
             return null;
         }
