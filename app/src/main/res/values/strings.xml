@@ -15,7 +15,16 @@
 
     <string name="close_app">뒤로 버튼을 한 번 더 누르면 앱이 종료됩니다.</string>
 
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="zero">이호 해수욕장</string>
+    <string name="one">삼양 해수욕장</string>
+    <string name="two">함덕 해수욕장</string>
+    <string name="three">김녕 해수욕장</string>
+    <string name="four">신양 해수욕장</string>
+    <string name="five">표천 해수욕장</string>
+    <string name="six">중문 해수욕장</string>
+    <string name="seven">화순 해수욕장</string>
+    <string name="eight">금릉 해수욕장</string>
+    <string name="nine">협제 해수욕장</string>
+    <string name="ten">곽지 해수욕장</string>
 
 </resources>

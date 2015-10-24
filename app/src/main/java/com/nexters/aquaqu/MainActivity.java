@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.nexters.aquaqu.activity.SettingActivity;
 import com.nexters.aquaqu.activity.SplashActivity;
 import com.nexters.aquaqu.adapter.MainAdapter;
 
@@ -35,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setLogo(R.drawable.ic_logo_24dp);
-        toolbar.setBackgroundColor(getResources().getColor(R.color.ctrans));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
@@ -74,7 +74,8 @@ public class MainActivity extends AppCompatActivity {
             case android.R.id.home:
                 finish();
                 break;
-            case R.id.action_settings:
+            case R.id.action_setup:
+                startActivity(new Intent(mContext, SettingActivity.class));
                 break;
         }
         return (super.onOptionsItemSelected(menuItem));

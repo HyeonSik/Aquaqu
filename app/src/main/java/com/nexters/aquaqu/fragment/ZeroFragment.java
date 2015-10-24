@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.nexters.aquaqu.R;
 import com.nexters.aquaqu.helper.OceanHelper;
@@ -21,6 +22,7 @@ import java.net.URL;
 
 /**
  * Created by HyunSik on 2015-10-25.
+ * 이호 해수욕장
  */
 public class ZeroFragment extends Fragment {
 
@@ -49,6 +51,8 @@ public class ZeroFragment extends Fragment {
         final View rootView = inflater.inflate(R.layout.l_activity_viewpager, container, false);
         rootView.setTag(TAG);
 
+        TextView pager01_name = (TextView) rootView.findViewById(R.id.pager01_name);
+
         return rootView;
     }
 
@@ -66,7 +70,6 @@ public class ZeroFragment extends Fragment {
         protected Void doInBackground(String... strings) {
 
             try {
-                Log.e("@@@", "들어옴!");
                 URL URL = new URL(url);
                 InputStream html = URL.openStream();
                 source = new Source(new InputStreamReader(html, "utf-8"));

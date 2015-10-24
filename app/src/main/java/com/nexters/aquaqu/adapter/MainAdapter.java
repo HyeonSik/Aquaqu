@@ -5,7 +5,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.nexters.aquaqu.fragment.EightFragment;
-import com.nexters.aquaqu.fragment.EleFragment;
 import com.nexters.aquaqu.fragment.FiveFragment;
 import com.nexters.aquaqu.fragment.FourFragment;
 import com.nexters.aquaqu.fragment.NineFragment;
@@ -52,8 +51,6 @@ public class MainAdapter extends FragmentStatePagerAdapter {
                 return NineFragment.newInstance();
             case 10:
                 return TenFragment.newInstance();
-            case 11:
-                return EleFragment.newInstance();
             default:
                 return ZeroFragment.newInstance();
         }
