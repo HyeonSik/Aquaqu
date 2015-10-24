@@ -70,6 +70,7 @@
                     <TextView
                         android:id="@+id/aqu_weather01"
                         style="@style/pager_item_24sp"
+                        android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="50dp"
