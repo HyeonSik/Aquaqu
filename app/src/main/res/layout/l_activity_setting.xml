@@ -1,7 +1,381 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#99000000"
     android:orientation="vertical">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--top bar-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_logo_48dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ic_clear_white_48dp" />
+        </RelativeLayout>
+        <!--top bar end-->
+
+        <TextView
+            android:id="@+id/setting_name"
+            style="@style/pager_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="44dp"
+            android:text="성산일출봉" />
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/setting_desc"
+            style="@style/pager_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:text="방문하실 장소를 설정해주세요.\n설정된 해안의 정보를 우선적으로 보여드립니다." />
+
+
+        <!--start's list-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="36dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--first star-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:weightSum="43">
+
+                <ImageView
+                    android:id="@+id/start00"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="3"
+                    android:src="@drawable/ic_star_outline_white" />
+
+                <TextView
+                    android:id="@+id/set_0"
+                    style="@style/pager_item_16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:paddingLeft="10dp"
+                    android:text="이호해수욕장" />
+            </LinearLayout>
+
+            <!--22-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:weightSum="43">
+
+                <ImageView
+                    android:id="@+id/start01"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="3"
+                    android:src="@drawable/ic_star_outline_white" />
+
+                <TextView
+                    android:id="@+id/set_1"
+                    style="@style/pager_item_16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:paddingLeft="10dp"
+                    android:text="삼양해수욕장" />
+            </LinearLayout>
+
+            <!--33-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:weightSum="43">
+
+                <ImageView
+                    android:id="@+id/start02"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="3"
+                    android:src="@drawable/ic_star_outline_white" />
+
+                <TextView
+                    android:id="@+id/set_2"
+                    style="@style/pager_item_16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:paddingLeft="10dp"
+                    android:text="함덕해수욕장" />
+            </LinearLayout>
+
+            <!--4-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:weightSum="43">
+
+                <ImageView
+                    android:id="@+id/start03"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="3"
+                    android:src="@drawable/ic_star_outline_white" />
+
+                <TextView
+                    android:id="@+id/set_3"
+                    style="@style/pager_item_16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:paddingLeft="10dp"
+                    android:text="김녕해수욕장" />
+            </LinearLayout>
+            <!--5-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:weightSum="43">
+
+                <ImageView
+                    android:id="@+id/start04"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="3"
+                    android:src="@drawable/ic_star_outline_white" />
+
+                <TextView
+                    android:id="@+id/set_4"
+                    style="@style/pager_item_16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:paddingLeft="10dp"
+                    android:text="신양해수욕장" />
+            </LinearLayout>
+            <!--6-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:weightSum="43">
+
+                <ImageView
+                    android:id="@+id/start05"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="3"
+                    android:src="@drawable/ic_star_outline_white" />
+
+                <TextView
+                    android:id="@+id/set_5"
+                    style="@style/pager_item_16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:paddingLeft="10dp"
+                    android:text="표선해수욕장" />
+            </LinearLayout>
+            <!--7-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:weightSum="43">
+
+                <ImageView
+                    android:id="@+id/start06"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="3"
+                    android:src="@drawable/ic_star_outline_white" />
+
+                <TextView
+                    android:id="@+id/set_6"
+                    style="@style/pager_item_16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:paddingLeft="10dp"
+                    android:text="중문해수욕장" />
+            </LinearLayout>
+            <!--8-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:weightSum="43">
+
+                <ImageView
+                    android:id="@+id/start07"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="3"
+                    android:src="@drawable/ic_star_outline_white" />
+
+                <TextView
+                    android:id="@+id/set_7"
+                    style="@style/pager_item_16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:paddingLeft="10dp"
+                    android:text="화순해수욕장" />
+            </LinearLayout>
+            <!--9-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:weightSum="43">
+
+                <ImageView
+                    android:id="@+id/start08"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="3"
+                    android:src="@drawable/ic_star_outline_white" />
+
+                <TextView
+                    android:id="@+id/set_8"
+                    style="@style/pager_item_16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:paddingLeft="10dp"
+                    android:text="금릉해수욕장" />
+            </LinearLayout>
+            <!--10-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:weightSum="43">
+
+                <ImageView
+                    android:id="@+id/start9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="3"
+                    android:src="@drawable/ic_star_outline_white" />
+
+                <TextView
+                    android:id="@+id/set_9"
+                    style="@style/pager_item_16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:paddingLeft="10dp"
+                    android:text="협재해수욕장" />
+            </LinearLayout>
+            <!--11-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:weightSum="43">
+
+                <ImageView
+                    android:id="@+id/start10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="3"
+                    android:src="@drawable/ic_star_outline_white" />
+
+                <TextView
+                    android:id="@+id/set_10"
+                    style="@style/pager_item_16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:paddingLeft="10dp"
+                    android:text="곽지해수욕장" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/maker"
+            style="@style/pager_item_12sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="제작자 정보" />
+
+        <TextView
+            android:id="@+id/version"
+            style="@style/pager_item_12sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="버전 정보" />
+
+        <TextView
+            android:id="@+id/near"
+            style="@style/pager_item_12sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="인근 공공기관 정보" />
+
+    </LinearLayout>
+</RelativeLayout>

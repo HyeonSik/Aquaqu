@@ -34,12 +34,13 @@
     <style name="pager_item_16sp">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_gravity">center_vertical</item>
+        <!--<item name="android:gravity">center</item>-->
+        <!--<item name="android:layout_gravity">center_vertical</item>-->
     </style>
 
     <style name="pager_item_12sp">
         <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
         <item name="android:textColor">@color/white</item>
     </style>
 </resources>
