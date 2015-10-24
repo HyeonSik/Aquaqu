@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.nexters.aquaqu.R;
 import com.nexters.aquaqu.util.PreferenceManager;
@@ -48,7 +49,7 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         start09 = (ImageView) findViewById(R.id.start09);
         start10 = (ImageView) findViewById(R.id.start10);
         setting_name = (TextView) findViewById(R.id.setting_name);
-        setting_exit = (ImageView)findViewById(R.id.setting_exit);
+        setting_exit = (ImageView) findViewById(R.id.setting_exit);
 
 
         start00.setOnClickListener(this);
@@ -68,75 +69,76 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        start00.setImageResource(R.drawable.ic_star_outline_white);
-        start01.setImageResource(R.drawable.ic_star_outline_white);
-        start02.setImageResource(R.drawable.ic_star_outline_white);
-        start03.setImageResource(R.drawable.ic_star_outline_white);
-        start04.setImageResource(R.drawable.ic_star_outline_white);
-        start05.setImageResource(R.drawable.ic_star_outline_white);
-        start06.setImageResource(R.drawable.ic_star_outline_white);
-        start07.setImageResource(R.drawable.ic_star_outline_white);
-        start08.setImageResource(R.drawable.ic_star_outline_white);
-        start09.setImageResource(R.drawable.ic_star_outline_white);
-        start10.setImageResource(R.drawable.ic_star_outline_white);
+        start00.setImageResource(R.drawable.ic_star_36dp);
+        start01.setImageResource(R.drawable.ic_star_36dp);
+        start02.setImageResource(R.drawable.ic_star_36dp);
+        start03.setImageResource(R.drawable.ic_star_36dp);
+        start04.setImageResource(R.drawable.ic_star_36dp);
+        start05.setImageResource(R.drawable.ic_star_36dp);
+        start06.setImageResource(R.drawable.ic_star_36dp);
+        start07.setImageResource(R.drawable.ic_star_36dp);
+        start08.setImageResource(R.drawable.ic_star_36dp);
+        start09.setImageResource(R.drawable.ic_star_36dp);
+        start10.setImageResource(R.drawable.ic_star_36dp);
         switch (v.getId()) {
             case R.id.start00:
-                start00.setImageResource(R.drawable.ic_star_white);
+                start00.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 0;
                 setting_name.setText(getResources().getString(R.string.zero));
                 break;
             case R.id.start01:
-                start01.setImageResource(R.drawable.ic_star_white);
+                start01.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 1;
                 setting_name.setText(getResources().getString(R.string.one));
                 break;
             case R.id.start02:
-                start02.setImageResource(R.drawable.ic_star_white);
+                start02.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 2;
                 setting_name.setText(getResources().getString(R.string.two));
                 break;
             case R.id.start03:
-                start03.setImageResource(R.drawable.ic_star_white);
+                start03.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 3;
                 setting_name.setText(getResources().getString(R.string.three));
                 break;
             case R.id.start04:
-                start04.setImageResource(R.drawable.ic_star_white);
+                start04.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 4;
                 setting_name.setText(getResources().getString(R.string.four));
                 break;
             case R.id.start05:
-                start05.setImageResource(R.drawable.ic_star_white);
+                start05.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 5;
                 setting_name.setText(getResources().getString(R.string.five));
                 break;
             case R.id.start06:
-                start06.setImageResource(R.drawable.ic_star_white);
+                start06.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 6;
                 setting_name.setText(getResources().getString(R.string.six));
                 break;
             case R.id.start07:
-                start07.setImageResource(R.drawable.ic_star_white);
+                start07.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 7;
                 setting_name.setText(getResources().getString(R.string.seven));
                 break;
             case R.id.start08:
-                start08.setImageResource(R.drawable.ic_star_white);
+                start08.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 8;
                 setting_name.setText(getResources().getString(R.string.eight));
                 break;
             case R.id.start09:
-                start09.setImageResource(R.drawable.ic_star_white);
+                start09.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 9;
                 setting_name.setText(getResources().getString(R.string.nine));
                 break;
             case R.id.start10:
-                start10.setImageResource(R.drawable.ic_star_white);
+                start10.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 10;
                 setting_name.setText(getResources().getString(R.string.ten));
                 break;
             case R.id.setting_exit:
                 PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
+                Toast.makeText(SettingActivity.this, PreferenceManager.getInstance(SettingActivity.this).getSelectedstar()+"", Toast.LENGTH_SHORT).show();
                 finish();
                 break;
         }

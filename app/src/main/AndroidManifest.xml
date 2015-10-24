@@ -23,7 +23,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.SettingActivity" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:theme="@style/custom_dialog" />
 
         <activity android:name=".activity.SplashActivity" />
     </application>
