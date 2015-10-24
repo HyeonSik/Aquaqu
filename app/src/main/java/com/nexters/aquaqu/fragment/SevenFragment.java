@@ -121,6 +121,14 @@ public class SevenFragment extends Fragment {
                 helper.setWind(SPAN1.getContent().toString().trim() + SPAN2.getContent().toString().trim() + SPAN3.getContent().toString().trim());
 
 
+                Element BBS_DIV21 = (Element) source.getAllElements(HTMLElementName.DIV).get(22); //BBSlocate 번째 의 DIV 를 모두 가져온다.
+                Element BBS_UL21 = (Element) BBS_DIV21.getAllElements(HTMLElementName.UL).get(0); //ul 접속
+
+                Element BBS_1 = (Element) BBS_UL21.getAllElements(HTMLElementName.LI).get(1); //데이터가 있는 li에 접속
+                Element BBS_2 = (Element) BBS_UL21.getAllElements(HTMLElementName.LI).get(2); //데이터가 있는 li에 접속
+
+                helper.setTide(BBS_1.getContent().toString().trim() + BBS_2.getContent().toString().trim());
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -131,6 +139,9 @@ public class SevenFragment extends Fragment {
         protected void onPostExecute(Void aVoid) {
 
             temp.setText(helper.getA_temp());
+            sea.setText(helper.getTide());
+            height.setText("0.50m");
+            weather.setText("17 ℃");
             water.setText(helper.getW_temp());
             wind.setText(helper.getWind());
 
