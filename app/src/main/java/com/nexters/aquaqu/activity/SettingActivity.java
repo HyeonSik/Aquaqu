@@ -50,6 +50,29 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         setting_name = (TextView) findViewById(R.id.setting_name);
         setting_exit = (ImageView) findViewById(R.id.setting_exit);
 
+        if(PreferenceManager.getInstance(this).getSelectedstar()!=0){
+            if(PreferenceManager.getInstance(this).getSelectedstar()==1){
+                setting_name.setText(getResources().getString(R.string.one));
+            }else if(PreferenceManager.getInstance(this).getSelectedstar()==2){
+                setting_name.setText(getResources().getString(R.string.two));
+            }else if(PreferenceManager.getInstance(this).getSelectedstar()==3){
+                setting_name.setText(getResources().getString(R.string.three));
+            }else if(PreferenceManager.getInstance(this).getSelectedstar()==4){
+                setting_name.setText(getResources().getString(R.string.four));
+            }else if(PreferenceManager.getInstance(this).getSelectedstar()==5){
+                setting_name.setText(getResources().getString(R.string.five));
+            }else if(PreferenceManager.getInstance(this).getSelectedstar()==6){
+                setting_name.setText(getResources().getString(R.string.six));
+            }else if(PreferenceManager.getInstance(this).getSelectedstar()==7){
+                setting_name.setText(getResources().getString(R.string.seven));
+            }else if(PreferenceManager.getInstance(this).getSelectedstar()==8){
+                setting_name.setText(getResources().getString(R.string.eight));
+            }else if(PreferenceManager.getInstance(this).getSelectedstar()==9){
+                setting_name.setText(getResources().getString(R.string.nine));
+            }else if(PreferenceManager.getInstance(this).getSelectedstar()==10){
+                setting_name.setText(getResources().getString(R.string.ten));
+            }
+        }
 
         start00.setOnClickListener(this);
         start01.setOnClickListener(this);

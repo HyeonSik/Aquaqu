@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:paddingTop="?actionBarSize"
     android:layout_height="match_parent"
     android:background="@drawable/img_beach01">
     <!--main Linear start-->
@@ -24,7 +25,8 @@
             android:layout_width="32dp"
             android:layout_height="3dp"
             android:layout_gravity="center"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="6dp"
             android:background="@color/white" />
 
         <TextView
@@ -34,15 +36,12 @@
             android:layout_height="wrap_content"
             android:text="22desc" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="28dp" />
 
         <!--pager item start-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="6dp"
+            android:layout_margin="30dp"
             android:orientation="vertical">
             <!--1st column-->
             <LinearLayout
@@ -53,67 +52,78 @@
 
                 <!--weather-->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="6dp"
+                    android:layout_weight="1"
                     android:background="@drawable/img_data01"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/pager_item_16sp"
+                        style="@style/pager_item_14sp"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/aqu_weather" />
 
                     <TextView
                         android:id="@+id/aqu_weather01"
-                        style="@style/pager_item_16sp"
+                        style="@style/pager_item_24sp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:text="부분맑음" />
 
                 </LinearLayout>
 
                 <!--temp-->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="6dp"
+                    android:layout_weight="1"
                     android:background="@drawable/img_data02"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/pager_item_16sp"
+                        style="@style/pager_item_14sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/aqu_temp" />
 
                     <TextView
                         android:id="@+id/aqu_temp01"
-                        style="@style/pager_item_16sp"
+                        style="@style/pager_item_24sp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp" />
 
                 </LinearLayout>
 
                 <!--wind-->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="6dp"
+                    android:layout_weight="1"
                     android:background="@drawable/img_data03"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/pager_item_16sp"
+                        style="@style/pager_item_14sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/aqu_wind" />
 
                     <TextView
                         android:id="@+id/aqu_wind01"
-                        style="@style/pager_item_16sp"
+                        style="@style/pager_item_24sp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" />
 
                 </LinearLayout>
 
@@ -129,67 +139,76 @@
 
                 <!--aqu_sea-->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="6dp"
+                    android:layout_weight="1"
                     android:background="@drawable/img_data04"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/pager_item_16sp"
+                        style="@style/pager_item_14sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/aqu_sea" />
 
                     <TextView
                         android:id="@+id/aqu_sea01"
-                        style="@style/pager_item_16sp"
+                        style="@style/pager_item_24sp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp" />
 
                 </LinearLayout>
 
                 <!--aqu_water-->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="6dp"
+                    android:layout_weight="1"
                     android:background="@drawable/img_data05"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/pager_item_16sp"
+                        style="@style/pager_item_14sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/aqu_water" />
 
                     <TextView
                         android:id="@+id/aqu_water01"
-                        style="@style/pager_item_16sp"
+                        style="@style/pager_item_24sp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp" />
 
                 </LinearLayout>
 
                 <!--height-->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="6dp"
+                    android:layout_weight="1"
                     android:background="@drawable/img_data06"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/pager_item_16sp"
+                        style="@style/pager_item_14sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/aqu_height" />
 
                     <TextView
                         android:id="@+id/aqu_height01"
-                        style="@style/pager_item_16sp"
+                        style="@style/pager_item_24sp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp" />
 
                 </LinearLayout>
 
@@ -199,50 +218,61 @@
             <!--news and important-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="160dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <!--news-->
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_margin="6dp"
-                    android:background="#55ffffff"
+                    android:layout_weight="2"
+                    android:background="@color/trans_white"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="6dp">
 
-                    <!--title-->
 
-                    <RelativeLayout
+                    <TextView
+                        style="@style/pager_item_16sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_centerVertical="true"
+                        android:layout_margin="5dp"
+                        android:text="@string/aqu_news" />
 
-                        <TextView
-                            style="@style/pager_item_16sp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/aqu_news" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:src="@drawable/ic_more_36dp" />
-                    </RelativeLayout>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
                         android:background="@color/white" />
 
                     <TextView
-                        android:id="@+id/pager_news"
+                        android:id="@+id/pager_news_item1"
+                        style="@style/pager_item_12sp"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="제주 우도서 관광객 3.." />
+
+                    <TextView
+                        android:id="@+id/pager_news_item2"
+                        style="@style/pager_item_12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="섬마을 속에는 섬 같은.." />
+
+                    <TextView
+                        android:id="@+id/pager_news_item3"
+                        style="@style/pager_item_12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="'혼저옵서예' 가을 제주 .." />
+
 
                 </LinearLayout>
                 <!--news end-->
@@ -250,29 +280,34 @@
                 <!--important-->
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_margin="6dp"
-                    android:background="#55ffffff"
+                    android:layout_weight="1"
+                    android:background="#55ff4d44"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="6dp">
 
                     <TextView
                         style="@style/pager_item_16sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
+                        android:layout_margin="5dp"
                         android:text="@string/aqu_important" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
                         android:background="@color/white" />
 
                     <TextView
                         android:id="@+id/pager_important"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="먼 바다 풍랑주의보" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -280,6 +315,69 @@
         </LinearLayout>
         <!--pager item end-->
 
+        <!--travel info-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:background="@color/cblue"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <TextView
+                style="@style/pager_item_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="관광정보" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white" />
+
+            <ImageView
+                android:id="@+id/travel_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_logo_48dp" />
+
+            <ImageView
+                android:id="@+id/travel_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_logo_48dp" />
+
+            <ImageView
+                android:id="@+id/travel_03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_logo_48dp" />
+
+            <ImageView
+                android:id="@+id/travel_04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_logo_48dp" />
+
+            <ImageView
+                android:id="@+id/travel_05"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_logo_48dp" />
+
+            <ImageView
+                android:id="@+id/travel_06"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_logo_48dp" />
+
+        </LinearLayout>
+        <!--travel info end-->
     </LinearLayout>
     <!--main LInear end-->
 </ScrollView>

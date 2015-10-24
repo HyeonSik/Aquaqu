@@ -26,13 +26,25 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 
     <style name="pager_item_14sp">
         <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/aqu_grey</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">10dp</item>
     </style>
+
+
+    <style name="pager_item_24sp">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center|bottom</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
 
     <style name="pager_item_20sp">
         <item name="android:textSize">20sp</item>
@@ -44,13 +56,12 @@
     <style name="pager_item_16sp">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/white</item>
-        <!--<item name="android:gravity">center</item>-->
-        <!--<item name="android:layout_gravity">center_vertical</item>-->
     </style>
 
     <style name="pager_item_12sp">
         <item name="android:textSize">12sp</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/white</item>
+
     </style>
 </resources>
