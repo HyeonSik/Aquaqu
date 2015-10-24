@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.nexters.aquaqu.activity.SettingActivity;
 import com.nexters.aquaqu.activity.SplashActivity;
 import com.nexters.aquaqu.adapter.MainAdapter;
+import com.nexters.aquaqu.util.PreferenceManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,13 +36,22 @@ public class MainActivity extends AppCompatActivity {
         mViewPager.setAdapter(mAdapter);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setLogo(R.drawable.ic_logo_24dp);
+        toolbar.setLogo(R.drawable.ic_logo_36dp);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         startActivity(new Intent(mContext, SplashActivity.class));
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // TODO Auto-generated method stub
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK && requestCode == 2) {
+            mViewPager.setCurrentItem(PreferenceManager.getInstance(mContext).getSelectedstar());
+
+        }
+    }
 
     private long backKeyPressedTime = 0;
 
@@ -76,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.action_setup:
                 startActivity(new Intent(mContext, SettingActivity.class));
+                Intent intent = new Intent(mContext, SettingActivity.class);
+                startActivityForResult(intent, 2);
                 break;
         }
         return (super.onOptionsItemSelected(menuItem));

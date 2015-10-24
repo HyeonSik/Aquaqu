@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.nexters.aquaqu.R;
 import com.nexters.aquaqu.helper.OceanHelper;
@@ -23,7 +24,7 @@ public class FourFragment extends Fragment {
 
     private Source source;
     OceanHelper helper = new OceanHelper();
-
+    TextView info, weather, temp, wind, sea, water, height;
 
     private static final String TAG = "FourFragment";
 
@@ -45,6 +46,17 @@ public class FourFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.l_activity_viewpager, container, false);
         rootView.setTag(TAG);
+
+        TextView name = (TextView) rootView.findViewById(R.id.pager01_name);
+        info = (TextView) rootView.findViewById(R.id.pager01_desc);
+        weather = (TextView) rootView.findViewById(R.id.aqu_weather01);
+        temp = (TextView) rootView.findViewById(R.id.aqu_temp01);
+        wind = (TextView) rootView.findViewById(R.id.aqu_wind01);
+        sea = (TextView) rootView.findViewById(R.id.aqu_sea01);
+        water = (TextView) rootView.findViewById(R.id.aqu_water01);
+        height = (TextView) rootView.findViewById(R.id.aqu_height01);
+
+        name.setText(getResources().getString(R.string.four));
 
         return rootView;
     }

@@ -7,17 +7,17 @@ import android.content.SharedPreferences;
  * This class is for use sharedPreferences to easy on evenywhere.
  * Implement singleton pattern. If you want add value.
  * You can modify sample code.
- * <p>
+ * <p/>
  * Sampe code. (You will change all key(KEY,Key,key) to value name use before)
  * private static final String KEY = "key";
  * private String key = "";
- * <p>
+ * <p/>
  * public void setKey(String key){
  * this.key = key;
  * mEditor.putString(KEY,key);
  * mEditor.commit();
  * }
- * <p>
+ * <p/>
  * public String getKey(){
  * if(key.equals("")){
  * key = mPrefs.getString("KEY", "");
@@ -27,13 +27,13 @@ import android.content.SharedPreferences;
  * //background select
  * private static final String BGSELECT = "bgSelect";
  * private int bgSelect = 1;
- * <p>
+ * <p/>
  * public void setBgSelect(int bgSelect){
  * this.bgSelect = bgSelect;
  * mEditor.putInt(BGSELECT, bgSelect);
  * mEditor.commit();
  * }
- * <p>
+ * <p/>
  * public int getBgSelect(){
  * if(bgSelect == 1){
  * bgSelect = mPrefs.getInt(BGSELECT, 1);
@@ -79,19 +79,20 @@ public class PreferenceManager {
     //select star in setting activity
     private static final String SELECTEDSTAR = "SELECTEDSTAR";
     private int selected_star = 0;
+
     public void setSelectedstar(int key) {
         this.selected_star = key;
         clear(SELECTEDSTAR);
         mEditor.putInt(SELECTEDSTAR, key);
         mEditor.commit();
     }
+
     public int getSelectedstar() {
-        if (selected_star==0) {
+        if (selected_star == 0) {
             selected_star = mPrefs.getInt(SELECTEDSTAR, 0);
         }
         return selected_star;
     }
-
 
 
     //clear
