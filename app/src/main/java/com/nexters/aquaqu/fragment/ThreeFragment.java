@@ -1,5 +1,6 @@
 package com.nexters.aquaqu.fragment;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.nexters.aquaqu.R;
+import com.nexters.aquaqu.activity.ArticleActivity;
 import com.nexters.aquaqu.config.CConstant;
 import com.nexters.aquaqu.helper.OceanHelper;
 
@@ -61,6 +63,34 @@ public class ThreeFragment extends Fragment {
         height = (TextView) rootView.findViewById(R.id.aqu_height01);
 
         name.setText(getResources().getString(R.string.three));
+        info.setText("만장굴과 가까이 위치한 코발트빛 바다가 있는 해수욕장");
+
+        rootView.findViewById(R.id.pager_news_item1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ArticleActivity.class);
+                intent.putExtra("img_", "@drawable/article1");
+                getActivity().startActivity(intent);
+            }
+        });
+
+        rootView.findViewById(R.id.pager_news_item2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ArticleActivity.class);
+                intent.putExtra("img_", "@drawable/article2");
+                getActivity().startActivity(intent);
+            }
+        });
+
+        rootView.findViewById(R.id.pager_news_item3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ArticleActivity.class);
+                intent.putExtra("img_", "@drawable/article3");
+                getActivity().startActivity(intent);
+            }
+        });
 
         return rootView;
     }

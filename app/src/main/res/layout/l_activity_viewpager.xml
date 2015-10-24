@@ -322,7 +322,6 @@
             android:layout_marginBottom="36dp"
             android:layout_marginLeft="36dp"
             android:layout_marginRight="36dp"
-            android:background="@color/cblue"
             android:orientation="vertical"
             android:padding="6dp">
 
@@ -343,38 +342,32 @@
             <ImageView
                 android:id="@+id/travel_01"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_logo_48dp" />
+                android:layout_height="wrap_content" />
 
             <ImageView
                 android:id="@+id/travel_02"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_logo_48dp" />
+                android:layout_height="wrap_content" />
 
             <ImageView
                 android:id="@+id/travel_03"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_logo_48dp" />
+                android:layout_height="wrap_content" />
 
             <ImageView
                 android:id="@+id/travel_04"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_logo_48dp" />
+                android:layout_height="wrap_content" />
 
             <ImageView
                 android:id="@+id/travel_05"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_logo_48dp" />
+                android:layout_height="wrap_content" />
 
             <ImageView
                 android:id="@+id/travel_06"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_logo_48dp" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
         <!--travel info end-->

@@ -1,5 +1,6 @@
 package com.nexters.aquaqu.fragment;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,9 +8,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nexters.aquaqu.R;
+import com.nexters.aquaqu.activity.ArticleActivity;
 import com.nexters.aquaqu.config.CConstant;
 import com.nexters.aquaqu.helper.OceanHelper;
 
@@ -61,6 +64,48 @@ public class TenFragment extends Fragment {
         height = (TextView) rootView.findViewById(R.id.aqu_height01);
 
         name.setText(getResources().getString(R.string.ten));
+        info.setText("과물 용천수와 분수대가 있어 아이들과 함께 즐기기가 좋은 곳!");
+
+        ImageView img1 = (ImageView) rootView.findViewById(R.id.travel_01);
+        ImageView img2 = (ImageView) rootView.findViewById(R.id.travel_02);
+        ImageView img3 = (ImageView) rootView.findViewById(R.id.travel_03);
+        ImageView img4 = (ImageView) rootView.findViewById(R.id.travel_04);
+        ImageView img5 = (ImageView) rootView.findViewById(R.id.travel_05);
+        ImageView img6 = (ImageView) rootView.findViewById(R.id.travel_06);
+
+        img1.setBackground(getResources().getDrawable(R.drawable.ji1));
+        img2.setBackground(getResources().getDrawable(R.drawable.ji2));
+        img3.setBackground(getResources().getDrawable(R.drawable.ji3));
+        img4.setBackground(getResources().getDrawable(R.drawable.ji4));
+        img5.setBackground(getResources().getDrawable(R.drawable.ji5));
+        img6.setBackground(getResources().getDrawable(R.drawable.ji6));
+
+        rootView.findViewById(R.id.pager_news_item1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ArticleActivity.class);
+                intent.putExtra("img_", "@drawable/article1");
+                getActivity().startActivity(intent);
+            }
+        });
+
+        rootView.findViewById(R.id.pager_news_item2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ArticleActivity.class);
+                intent.putExtra("img_", "@drawable/article2");
+                getActivity().startActivity(intent);
+            }
+        });
+
+        rootView.findViewById(R.id.pager_news_item3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ArticleActivity.class);
+                intent.putExtra("img_", "@drawable/article3");
+                getActivity().startActivity(intent);
+            }
+        });
 
         return rootView;
     }

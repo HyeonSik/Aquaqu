@@ -2,12 +2,14 @@ package com.nexters.aquaqu;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.nexters.aquaqu.activity.SettingActivity;
@@ -41,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setLogo(R.drawable.ic_logo_36dp);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(mContext,"제주 해양 경찰서로 전화걸기!",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:064-766-2119"));
+                startActivity(intent);
+            }
+        });
 
         startActivity(new Intent(mContext, SplashActivity.class));
     }

@@ -1,5 +1,6 @@
 package com.nexters.aquaqu.fragment;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,9 +8,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nexters.aquaqu.R;
+import com.nexters.aquaqu.activity.ArticleActivity;
 import com.nexters.aquaqu.config.CConstant;
 import com.nexters.aquaqu.helper.OceanHelper;
 
@@ -62,6 +65,29 @@ public class OneFragment extends Fragment {
         height = (TextView) rootView.findViewById(R.id.aqu_height01);
 
         name.setText(getResources().getString(R.string.one));
+        info.setText("검은모래찜질과 바다낚시를 동시에!");
+
+        ImageView img1 = (ImageView) rootView.findViewById(R.id.travel_01);
+        ImageView img2 = (ImageView) rootView.findViewById(R.id.travel_02);
+        ImageView img3 = (ImageView) rootView.findViewById(R.id.travel_03);
+        ImageView img4 = (ImageView) rootView.findViewById(R.id.travel_04);
+        ImageView img5 = (ImageView) rootView.findViewById(R.id.travel_05);
+
+        img1.setBackground(getResources().getDrawable(R.drawable.sam1));
+        img2.setBackground(getResources().getDrawable(R.drawable.sam2));
+        img3.setBackground(getResources().getDrawable(R.drawable.sam3));
+        img4.setBackground(getResources().getDrawable(R.drawable.sam4));
+        img5.setBackground(getResources().getDrawable(R.drawable.sam5));
+
+        rootView.findViewById(R.id.pager_news_item1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ArticleActivity.class);
+                intent.putExtra("img_", "@drawable/article1");
+                getActivity().startActivity(intent);
+            }
+        });
+
 
         return rootView;
     }

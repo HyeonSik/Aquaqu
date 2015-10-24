@@ -1,5 +1,6 @@
 package com.nexters.aquaqu.fragment;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,9 +8,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nexters.aquaqu.R;
+import com.nexters.aquaqu.activity.ArticleActivity;
 import com.nexters.aquaqu.config.CConstant;
 import com.nexters.aquaqu.helper.OceanHelper;
 
@@ -48,7 +51,7 @@ public class ZeroFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.l_activity_viewpager, container, false);
         rootView.setTag(TAG);
 
@@ -62,7 +65,34 @@ public class ZeroFragment extends Fragment {
         height = (TextView) rootView.findViewById(R.id.aqu_height01);
 
         name.setText(getResources().getString(R.string.zero));
+        info.setText("교통이 편리하고 도심에서 가장 가까운 해수욕장");
 
+
+        ImageView img1 = (ImageView) rootView.findViewById(R.id.travel_01);
+        ImageView img2 = (ImageView) rootView.findViewById(R.id.travel_02);
+        ImageView img3 = (ImageView) rootView.findViewById(R.id.travel_03);
+
+        img1.setBackground(getResources().getDrawable(R.drawable.ho1));
+        img2.setBackground(getResources().getDrawable(R.drawable.ho2));
+        img3.setBackground(getResources().getDrawable(R.drawable.ho3));
+
+        rootView.findViewById(R.id.pager_news_item1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ArticleActivity.class);
+                intent.putExtra("img_", "@drawable/article1");
+                getActivity().startActivity(intent);
+            }
+        });
+
+      img2.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              Intent intent = new Intent(getActivity(), ArticleActivity.class);
+              intent.putExtra("img_", "@drawable/article2");
+              getActivity().startActivity(intent);
+          }
+      });
 
         return rootView;
     }
