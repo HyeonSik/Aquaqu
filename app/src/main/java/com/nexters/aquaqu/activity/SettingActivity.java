@@ -154,4 +154,10 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
                 break;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        setResult(RESULT_OK);
+        finish();
+    }
 }
