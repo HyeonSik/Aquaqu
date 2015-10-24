@@ -33,17 +33,13 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    public TextView textView;
     private Source source;
-    private int BBSlocate;
     OceanHelper helper = new OceanHelper();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*/
 
 
         //new GetHtml("http://sms.khoa.go.kr/koofs/kor/observation/obs_real_detail.asp?tsType=0&tsId=13&obsItem=ALL").execute();
@@ -109,23 +105,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (menuItem.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+            case R.id.action_settings:
+                break;
         }
-
-        return super.onOptionsItemSelected(item);
+        return (super.onOptionsItemSelected(menuItem));
     }
 }
