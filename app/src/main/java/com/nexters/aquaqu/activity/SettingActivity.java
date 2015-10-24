@@ -83,60 +83,71 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.start00:
                 start00.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 0;
+                PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
                 setting_name.setText(getResources().getString(R.string.zero));
                 break;
             case R.id.start01:
                 start01.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 1;
+                PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
                 setting_name.setText(getResources().getString(R.string.one));
                 break;
             case R.id.start02:
                 start02.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 2;
+                PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
                 setting_name.setText(getResources().getString(R.string.two));
                 break;
             case R.id.start03:
                 start03.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 3;
+                PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
                 setting_name.setText(getResources().getString(R.string.three));
                 break;
             case R.id.start04:
                 start04.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 4;
+                PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
                 setting_name.setText(getResources().getString(R.string.four));
                 break;
             case R.id.start05:
                 start05.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 5;
+                PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
                 setting_name.setText(getResources().getString(R.string.five));
                 break;
             case R.id.start06:
                 start06.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 6;
+                PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
                 setting_name.setText(getResources().getString(R.string.six));
                 break;
             case R.id.start07:
                 start07.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 7;
+                PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
                 setting_name.setText(getResources().getString(R.string.seven));
                 break;
             case R.id.start08:
                 start08.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 8;
+                PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
                 setting_name.setText(getResources().getString(R.string.eight));
                 break;
             case R.id.start09:
                 start09.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 9;
+                PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
                 setting_name.setText(getResources().getString(R.string.nine));
                 break;
             case R.id.start10:
                 start10.setImageResource(R.drawable.ic_star_on_36dp);
                 img_selected = 10;
+                PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
                 setting_name.setText(getResources().getString(R.string.ten));
                 break;
             case R.id.setting_exit:
-                PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
+//                PreferenceManager.getInstance(SettingActivity.this).setSelectedstar(img_selected);
                 setResult(RESULT_OK);
 //                Toast.makeText(SettingActivity.this, PreferenceManager.getInstance(SettingActivity.this).getSelectedstar()+"", Toast.LENGTH_SHORT).show();
                 finish();
